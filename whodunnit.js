@@ -39,3 +39,23 @@ console.log( 'Suspect three is:' + suspectThree )
 
 //prints out 'Jay, Val, Harvey, Rick'
 // and then 'suspect three is Keith'
+
+//Episode4
+
+var detective = {
+    name : 'Ace Ventura',
+    pet : 'monkey'
+  }
+
+var printName = function(detective) {
+  return detective.name
+}
+
+var detectiveInfo = function() {
+  detective['name'] = 'Poirot'
+  return printName(detective);
+}
+
+console.log(detectiveInfo());
+
+//prints out Poirot. DetectiveInfo function is called, which reassigned the detective's namd before printing it out.
