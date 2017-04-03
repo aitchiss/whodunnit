@@ -59,3 +59,41 @@ var detectiveInfo = function() {
 console.log(detectiveInfo());
 
 //prints out Poirot. DetectiveInfo function is called, which reassigned the detective's namd before printing it out.
+
+//Episode5
+
+var murderer = 'rick';
+
+var outerFunction = function(){
+  var murderer = 'marc';
+
+  var innerFunction = function(){
+    murderer = 'valerie';
+  }
+
+  innerFunction();
+}
+
+outerFunction();
+console.log('the murderer is ', murderer);
+
+//prints out Rick. Although outer function is called, it doesn't have the scope to change the global variable.
+
+//Episode6
+
+var murderer = "Craig";
+
+var outerFunction = function(){
+  murderer = "Keith";
+  var innerFunction = function(){
+    var murderer = "Sian";
+  }
+}
+
+var changeMurderer = function(){
+  var murderer = "Jarrod";
+}
+
+outerFunction();
+changeMurderer();
+console.log('murderer is:', murderer);
