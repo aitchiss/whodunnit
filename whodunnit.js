@@ -21,3 +21,21 @@ var result = function() {
 
 console.log(result());
 //prints out 3. It looks at the closest-scope 'score'
+
+//Episode3
+
+var suspectOne = 'Jay';
+var suspectTwo = 'Val';
+var suspectThree = 'Keith';
+var suspectFour = 'Rick';
+
+var allSuspects = function() {
+  var suspectThree = 'Harvey'
+  console.log('Suspects include: ' + suspectOne + ', ' + suspectTwo + ', ' + suspectThree + ', ' + suspectFour)
+}
+
+allSuspects();
+console.log( 'Suspect three is:' + suspectThree )
+
+//prints out 'Jay, Val, Harvey, Rick'
+// and then 'suspect three is Keith'
